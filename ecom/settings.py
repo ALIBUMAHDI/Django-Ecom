@@ -21,9 +21,10 @@ DEBUG = True
 
 #ALLOWED_HOSTS = []
 #CSRF_TRUSTED_ORIGINS = []
-ALLOWED_HOSTS = ['django-ecom-production-242a.up.railway.app', 'https://django-ecom-production-242a.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://django-ecom-production-242a.up.railway.app']
+#ALLOWED_HOSTS = ['django-ecom-production-c4c2.up.railway.app', 'https://django-ecom-production-c4c2.up.railway.app']
+#CSRF_TRUSTED_ORIGINS = ['https://django-ecom-production-c4c2.up.railway.app']
 
+#django-ecom-production-c4c2.up.railway.app
 
 # Application definition
 
@@ -37,7 +38,7 @@ INSTALLED_APPS = [
     'store',
     'cart',
     'payment',
-    'whitenoise.runserver_nostatic',
+    #'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
@@ -48,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    #'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'ecom.urls'
@@ -78,15 +79,15 @@ WSGI_APPLICATION = 'ecom.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': BASE_DIR / 'db.sqlite3',
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': os.environ.get('DB_PASSWORD_YO'),
-        #'PASSWORD': DB_PASSWORD_YO,
-        'HOST': 'monorail.proxy.rlwy.net',
-        'PORT': '16508',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': 'railway',
+        #'USER': 'postgres',
+        #'PASSWORD': os.environ.get('DB_PASSWORD_YO'),
+        ##'PASSWORD': DB_PASSWORD_YO,
+        #'HOST': 'monorail.proxy.rlwy.net',
+        #'PORT': '16508',
         
     }
 }
